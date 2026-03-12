@@ -1,0 +1,605 @@
+Execution start: 2026-03-07T23:03:50+00:00
+given primes list is big enough for a proof
+Parameters: p = 53, k = 9
+Step1 (n=1): S size = 120926
+Time elapsed: 0.33s
+trying 2: T size = 381368 => (n=2): S size = 381368
+Time elapsed: 0.341s
+trying 2: T size = 17836 => (n=4): S size = 17836
+Time elapsed: 1.287s
+trying 3: T size = 104 => (n=12): S size = 104
+Time elapsed: 2.629s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 5.403s
+
+Parameters: p = 59, k = 9
+Step1 (n=1): S size = 24099
+Time elapsed: 0.8s
+trying 2: T size = 19923 => (n=2): S size = 19923
+Time elapsed: 0.86s
+trying 2: T size = 696 => (n=4): S size = 696
+Time elapsed: 0.92s
+trying 3: T size = 116 => (n=12): S size = 116
+Time elapsed: 0.152s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 6.302s
+
+Parameters: p = 67, k = 9
+Step1 (n=1): S size = 211794
+Time elapsed: 0.42s
+trying 2: T size = 218746 => (n=2): S size = 218746
+Time elapsed: 0.951s
+trying 2: T size = 990 => (n=4): S size = 990
+Time elapsed: 1.28s
+trying 3: T size = 132 => (n=12): S size = 132
+Time elapsed: 0.238s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 8.150s
+
+Parameters: p = 71, k = 9
+Step1 (n=1): S size = 587160
+Time elapsed: 0.187s
+trying 2: T size = 620620 => (n=2): S size = 620620
+Time elapsed: 2.685s
+trying 2: T size = 8190 => (n=4): S size = 8190
+Time elapsed: 3.313s
+trying 3: T size = 140 => (n=12): S size = 140
+Time elapsed: 2.9s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 8.331s
+
+Parameters: p = 73, k = 9
+Step1 (n=1): S size = 352692
+Time elapsed: 0.94s
+trying 2: T size = 139332 => (n=2): S size = 139332
+Time elapsed: 1.397s
+trying 2: T size = 576 => (n=4): S size = 576
+Time elapsed: 0.639s
+trying 3: T size = 144 => (n=12): S size = 144
+Time elapsed: 0.143s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 8.953s
+
+Parameters: p = 79, k = 9
+Step1 (n=1): S size = 50596
+Time elapsed: 0.24s
+trying 2: T size = 8931 => (n=2): S size = 8931
+Time elapsed: 0.188s
+trying 2: T size = 78 => (n=4): S size = 78
+Time elapsed: 0.45s
+trying 3: T size = 156 => (n=4): S size = 78
+Time elapsed: 0.25s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 2.70s
+
+Parameters: p = 83, k = 9
+Step1 (n=1): S size = 591302
+Time elapsed: 0.202s
+trying 2: T size = 119720 => (n=2): S size = 119720
+Time elapsed: 2.428s
+trying 2: T size = 246 => (n=4): S size = 246
+Time elapsed: 0.557s
+trying 3: T size = 164 => (n=12): S size = 164
+Time elapsed: 0.58s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 10.859s
+
+Parameters: p = 89, k = 9
+Step1 (n=1): S size = 60808
+Time elapsed: 0.57s
+trying 2: T size = 3212 => (n=2): S size = 3212
+Time elapsed: 0.239s
+trying 2: T size = 176 => (n=4): S size = 176
+Time elapsed: 0.25s
+trying 3: T size = 176 => (n=12): S size = 176
+Time elapsed: 0.45s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 11.765s
+
+Parameters: p = 97, k = 9
+Step1 (n=1): S size = 91616
+Time elapsed: 0.108s
+trying 2: T size = 4992 => (n=2): S size = 4992
+Time elapsed: 0.353s
+trying 2: T size = 96 => (n=4): S size = 96
+Time elapsed: 0.32s
+trying 3: T size = 192 => (n=4): S size = 96
+Time elapsed: 0.30s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 3.84s
+
+Parameters: p = 101, k = 9
+Step1 (n=1): S size = 1131150
+Time elapsed: 0.631s
+trying 2: T size = 117500 => (n=2): S size = 117500
+Time elapsed: 5.37s
+trying 2: T size = 700 => (n=4): S size = 700
+Time elapsed: 0.541s
+trying 3: T size = 200 => (n=12): S size = 200
+Time elapsed: 0.162s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 14.286s
+
+Parameters: p = 103, k = 9
+Step1 (n=1): S size = 572084
+Time elapsed: 0.330s
+trying 2: T size = 33932 => (n=2): S size = 33932
+Time elapsed: 2.474s
+trying 2: T size = 306 => (n=4): S size = 306
+Time elapsed: 0.155s
+trying 3: T size = 204 => (n=12): S size = 204
+Time elapsed: 0.76s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 13.367s
+
+Parameters: p = 107, k = 9
+Step1 (n=1): S size = 149354
+Time elapsed: 0.190s
+trying 2: T size = 7314 => (n=2): S size = 7314
+Time elapsed: 0.575s
+trying 2: T size = 106 => (n=4): S size = 106
+Time elapsed: 0.43s
+trying 3: T size = 212 => (n=4): S size = 106
+Time elapsed: 0.35s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 5.339s
+
+Parameters: p = 109, k = 9
+Step1 (n=1): S size = 70668
+Time elapsed: 0.136s
+trying 2: T size = 2268 => (n=2): S size = 2268
+Time elapsed: 0.284s
+trying 2: T size = 108 => (n=4): S size = 108
+Time elapsed: 0.16s
+trying 3: T size = 216 => (n=4): S size = 108
+Time elapsed: 0.32s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 5.295s
+
+Parameters: p = 113, k = 9
+Step1 (n=1): S size = 287448
+Time elapsed: 0.513s
+trying 2: T size = 5264 => (n=2): S size = 5264
+Time elapsed: 1.97s
+trying 2: T size = 112 => (n=4): S size = 112
+Time elapsed: 0.30s
+trying 3: T size = 224 => (n=4): S size = 112
+Time elapsed: 0.40s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 5.739s
+
+Parameters: p = 127, k = 9
+Step1 (n=1): S size = 204988
+Time elapsed: 0.717s
+trying 2: T size = 756 => (n=2): S size = 756
+Time elapsed: 0.738s
+trying 2: T size = 252 => (n=4): S size = 252
+Time elapsed: 0.6s
+trying 3: T size = 252 => (n=12): S size = 252
+Time elapsed: 0.70s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 22.108s
+
+Parameters: p = 131, k = 9
+Step1 (n=1): S size = 541385
+Time elapsed: 1.578s
+trying 2: T size = 3770 => (n=2): S size = 3770
+Time elapsed: 2.428s
+trying 2: T size = 130 => (n=4): S size = 130
+Time elapsed: 0.20s
+trying 3: T size = 260 => (n=4): S size = 130
+Time elapsed: 0.44s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 6.507s
+
+Parameters: p = 137, k = 9
+Step1 (n=1): S size = 62560
+Time elapsed: 0.908s
+trying 2: T size = 340 => (n=2): S size = 340
+Time elapsed: 0.237s
+trying 2: T size = 136 => (n=4): S size = 136
+Time elapsed: 0.3s
+trying 3: T size = 272 => (n=4): S size = 136
+Time elapsed: 0.41s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 7.409s
+
+Parameters: p = 139, k = 9
+Step1 (n=1): S size = 35903
+Time elapsed: 0.874s
+trying 2: T size = 207 => (n=2): S size = 207
+Time elapsed: 0.131s
+trying 2: T size = 138 => (n=4): S size = 138
+Time elapsed: 0.2s
+trying 3: T size = 276 => (n=4): S size = 138
+Time elapsed: 0.39s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 7.719s
+
+Parameters: p = 149, k = 9
+Step1 (n=1): S size = 30562
+Time elapsed: 1.317s
+trying 2: T size = 740 => (n=2): S size = 740
+Time elapsed: 0.106s
+trying 2: T size = 148 => (n=4): S size = 148
+Time elapsed: 0.4s
+trying 3: T size = 296 => (n=4): S size = 148
+Time elapsed: 0.40s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 8.780s
+
+Parameters: p = 151, k = 9
+Step1 (n=1): S size = 277350
+Time elapsed: 3.22s
+trying 2: T size = 1575 => (n=2): S size = 1575
+Time elapsed: 1.116s
+trying 2: T size = 150 => (n=4): S size = 150
+Time elapsed: 0.11s
+trying 3: T size = 300 => (n=4): S size = 150
+Time elapsed: 0.47s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 8.270s
+
+Parameters: p = 157, k = 9
+Step1 (n=1): S size = 36972
+Time elapsed: 1.983s
+trying 2: T size = 390 => (n=2): S size = 390
+Time elapsed: 0.131s
+trying 2: T size = 156 => (n=4): S size = 156
+Time elapsed: 0.3s
+trying 3: T size = 312 => (n=4): S size = 156
+Time elapsed: 0.46s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 7.675s
+
+Parameters: p = 163, k = 9
+Step1 (n=1): S size = 81405
+Time elapsed: 3.284s
+trying 2: T size = 486 => (n=2): S size = 486
+Time elapsed: 0.319s
+trying 2: T size = 324 => (n=4): S size = 324
+Time elapsed: 0.4s
+trying 3: T size = 324 => (n=12): S size = 324
+Time elapsed: 0.93s
+trying 5: T size = 0 => (n=60): S size = 0
+Time elapsed: 30.203s
+
+Parameters: p = 167, k = 9
+Step1 (n=1): S size = 18260
+Time elapsed: 2.730s
+trying 2: T size = 581 => (n=2): S size = 581
+Time elapsed: 0.73s
+trying 2: T size = 166 => (n=4): S size = 166
+Time elapsed: 0.4s
+trying 3: T size = 332 => (n=4): S size = 166
+Time elapsed: 0.48s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 8.779s
+
+Parameters: p = 173, k = 9
+Step1 (n=1): S size = 41108
+Time elapsed: 4.252s
+trying 2: T size = 344 => (n=2): S size = 344
+Time elapsed: 0.154s
+trying 2: T size = 172 => (n=4): S size = 172
+Time elapsed: 0.3s
+trying 3: T size = 344 => (n=4): S size = 172
+Time elapsed: 0.77s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 9.548s
+
+Parameters: p = 179, k = 9
+Step1 (n=1): S size = 4539
+Time elapsed: 3.160s
+trying 2: T size = 178 => (n=2): S size = 178
+Time elapsed: 0.22s
+trying 2: T size = 178 => (n=4): S size = 178
+Time elapsed: 0.2s
+trying 3: T size = 356 => (n=4): S size = 178
+Time elapsed: 0.76s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 9.96s
+
+Parameters: p = 181, k = 9
+Step1 (n=1): S size = 45240
+Time elapsed: 7.208s
+trying 2: T size = 360 => (n=2): S size = 360
+Time elapsed: 0.214s
+trying 2: T size = 180 => (n=4): S size = 180
+Time elapsed: 0.5s
+trying 3: T size = 360 => (n=4): S size = 180
+Time elapsed: 0.104s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 9.546s
+
+Parameters: p = 191, k = 9
+Step1 (n=1): S size = 25840
+Time elapsed: 8.637s
+trying 2: T size = 570 => (n=2): S size = 570
+Time elapsed: 0.104s
+trying 2: T size = 190 => (n=4): S size = 190
+Time elapsed: 0.5s
+trying 3: T size = 380 => (n=4): S size = 190
+Time elapsed: 0.88s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 10.708s
+
+Parameters: p = 193, k = 9
+Step1 (n=1): S size = 11808
+Time elapsed: 7.257s
+trying 2: T size = 192 => (n=2): S size = 192
+Time elapsed: 0.52s
+trying 2: T size = 192 => (n=4): S size = 192
+Time elapsed: 0.2s
+trying 3: T size = 384 => (n=4): S size = 192
+Time elapsed: 0.87s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 11.50s
+
+Parameters: p = 197, k = 9
+Step1 (n=1): S size = 2450
+Time elapsed: 6.53s
+trying 2: T size = 294 => (n=2): S size = 294
+Time elapsed: 0.14s
+trying 2: T size = 196 => (n=4): S size = 196
+Time elapsed: 0.3s
+trying 3: T size = 392 => (n=4): S size = 196
+Time elapsed: 0.83s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 11.446s
+
+Parameters: p = 199, k = 9
+Step1 (n=1): S size = 1980
+Time elapsed: 5.768s
+trying 2: T size = 99 => (n=2): S size = 99
+Time elapsed: 0.11s
+trying 2: T size = 198 => (n=2): S size = 99
+Time elapsed: 0.2s
+trying 3: T size = 198 => (n=2): S size = 99
+Time elapsed: 0.27s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 2.731s
+
+Parameters: p = 211, k = 9
+Step1 (n=1): S size = 12950
+Time elapsed: 17.594s
+trying 2: T size = 210 => (n=2): S size = 210
+Time elapsed: 0.58s
+trying 2: T size = 210 => (n=4): S size = 210
+Time elapsed: 0.3s
+trying 3: T size = 420 => (n=4): S size = 210
+Time elapsed: 0.94s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 11.517s
+
+Parameters: p = 223, k = 9
+Step1 (n=1): S size = 8769
+Time elapsed: 21.331s
+trying 2: T size = 222 => (n=2): S size = 222
+Time elapsed: 0.42s
+trying 2: T size = 222 => (n=4): S size = 222
+Time elapsed: 0.3s
+trying 3: T size = 444 => (n=4): S size = 222
+Time elapsed: 0.105s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 13.36s
+
+Parameters: p = 227, k = 9
+Step1 (n=1): S size = 2486
+Time elapsed: 17.135s
+trying 2: T size = 113 => (n=2): S size = 113
+Time elapsed: 0.11s
+trying 2: T size = 226 => (n=2): S size = 113
+Time elapsed: 0.3s
+trying 3: T size = 226 => (n=2): S size = 113
+Time elapsed: 0.33s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 5.410s
+
+Parameters: p = 229, k = 9
+Step1 (n=1): S size = 798
+Time elapsed: 15.854s
+trying 2: T size = 114 => (n=2): S size = 114
+Time elapsed: 0.4s
+trying 2: T size = 228 => (n=2): S size = 114
+Time elapsed: 0.3s
+trying 3: T size = 228 => (n=2): S size = 114
+Time elapsed: 0.32s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 5.463s
+
+Parameters: p = 233, k = 9
+Step1 (n=1): S size = 3480
+Time elapsed: 26.168s
+trying 2: T size = 116 => (n=2): S size = 116
+Time elapsed: 0.14s
+trying 2: T size = 232 => (n=2): S size = 116
+Time elapsed: 0.3s
+trying 3: T size = 232 => (n=2): S size = 116
+Time elapsed: 0.32s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 5.297s
+
+Parameters: p = 239, k = 9
+Step1 (n=1): S size = 714
+Time elapsed: 20.458s
+trying 2: T size = 238 => (n=2): S size = 238
+Time elapsed: 0.3s
+trying 2: T size = 238 => (n=4): S size = 238
+Time elapsed: 0.4s
+trying 3: T size = 476 => (n=4): S size = 238
+Time elapsed: 0.112s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 14.441s
+
+Parameters: p = 241, k = 9
+Step1 (n=1): S size = 3720
+Time elapsed: 37.319s
+trying 2: T size = 240 => (n=2): S size = 240
+Time elapsed: 0.15s
+trying 2: T size = 240 => (n=4): S size = 240
+Time elapsed: 0.4s
+trying 3: T size = 480 => (n=4): S size = 240
+Time elapsed: 0.121s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 15.67s
+
+Parameters: p = 251, k = 9
+Step1 (n=1): S size = 1625
+Time elapsed: 44.841s
+trying 2: T size = 250 => (n=2): S size = 250
+Time elapsed: 0.7s
+trying 2: T size = 250 => (n=4): S size = 250
+Time elapsed: 0.4s
+trying 3: T size = 500 => (n=4): S size = 250
+Time elapsed: 0.117s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 16.950s
+
+Parameters: p = 257, k = 9
+Step1 (n=1): S size = 384
+Time elapsed: 33.178s
+trying 2: T size = 128 => (n=2): S size = 128
+Time elapsed: 0.2s
+trying 2: T size = 256 => (n=2): S size = 128
+Time elapsed: 0.3s
+trying 3: T size = 256 => (n=2): S size = 128
+Time elapsed: 0.33s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 5.341s
+
+Parameters: p = 263, k = 9
+Step1 (n=1): S size = 917
+Time elapsed: 57.135s
+trying 2: T size = 262 => (n=2): S size = 262
+Time elapsed: 0.5s
+trying 2: T size = 262 => (n=4): S size = 262
+Time elapsed: 0.4s
+trying 3: T size = 524 => (n=4): S size = 262
+Time elapsed: 0.114s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 15.772s
+
+Parameters: p = 269, k = 9
+Step1 (n=1): S size = 134
+Time elapsed: 43.993s
+trying 2: T size = 134 => (n=2): S size = 134
+Time elapsed: 0.1s
+trying 2: T size = 268 => (n=2): S size = 134
+Time elapsed: 0.3s
+trying 3: T size = 268 => (n=2): S size = 134
+Time elapsed: 0.33s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 6.471s
+
+Parameters: p = 271, k = 9
+Step1 (n=1): S size = 2160
+Time elapsed: 74.232s
+trying 2: T size = 135 => (n=2): S size = 135
+Time elapsed: 0.10s
+trying 2: T size = 270 => (n=2): S size = 135
+Time elapsed: 0.4s
+trying 3: T size = 270 => (n=2): S size = 135
+Time elapsed: 0.40s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 6.858s
+
+Parameters: p = 277, k = 9
+Step1 (n=1): S size = 276
+Time elapsed: 54.401s
+trying 2: T size = 138 => (n=2): S size = 138
+Time elapsed: 0.2s
+trying 2: T size = 276 => (n=2): S size = 138
+Time elapsed: 0.3s
+trying 3: T size = 276 => (n=2): S size = 138
+Time elapsed: 0.36s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 6.973s
+
+Parameters: p = 281, k = 9
+Step1 (n=1): S size = 840
+Time elapsed: 87.759s
+trying 2: T size = 140 => (n=2): S size = 140
+Time elapsed: 0.4s
+trying 2: T size = 280 => (n=2): S size = 140
+Time elapsed: 0.4s
+trying 3: T size = 280 => (n=2): S size = 140
+Time elapsed: 0.41s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 7.620s
+
+Parameters: p = 283, k = 9
+Step1 (n=1): S size = 987
+Time elapsed: 81.322s
+trying 2: T size = 282 => (n=2): S size = 282
+Time elapsed: 0.6s
+trying 2: T size = 282 => (n=4): S size = 282
+Time elapsed: 0.5s
+trying 3: T size = 564 => (n=4): S size = 282
+Time elapsed: 0.125s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 18.534s
+
+Parameters: p = 293, k = 9
+Step1 (n=1): S size = 730
+Time elapsed: 100.470s
+trying 2: T size = 146 => (n=2): S size = 146
+Time elapsed: 0.4s
+trying 2: T size = 292 => (n=2): S size = 146
+Time elapsed: 0.4s
+trying 3: T size = 292 => (n=2): S size = 146
+Time elapsed: 0.40s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 7.946s
+
+Parameters: p = 307, k = 9
+Step1 (n=1): S size = 1224
+Time elapsed: 99.948s
+trying 2: T size = 306 => (n=2): S size = 306
+Time elapsed: 0.7s
+trying 2: T size = 306 => (n=4): S size = 306
+Time elapsed: 0.5s
+trying 3: T size = 612 => (n=4): S size = 306
+Time elapsed: 0.147s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 22.517s
+
+Parameters: p = 311, k = 9
+Step1 (n=1): S size = 620
+Time elapsed: 173.422s
+trying 2: T size = 155 => (n=2): S size = 155
+Time elapsed: 0.4s
+trying 2: T size = 310 => (n=2): S size = 155
+Time elapsed: 0.4s
+trying 3: T size = 310 => (n=2): S size = 155
+Time elapsed: 0.47s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 7.99s
+
+Parameters: p = 313, k = 9
+Step1 (n=1): S size = 468
+Time elapsed: 162.903s
+trying 2: T size = 312 => (n=2): S size = 312
+Time elapsed: 0.4s
+trying 2: T size = 312 => (n=4): S size = 312
+Time elapsed: 0.5s
+trying 3: T size = 624 => (n=4): S size = 312
+Time elapsed: 0.148s
+trying 5: T size = 0 => (n=20): S size = 0
+Time elapsed: 19.826s
+
+Parameters: p = 317, k = 9
+Step1 (n=1): S size = 316
+Time elapsed: 123.669s
+trying 2: T size = 158 => (n=2): S size = 158
+Time elapsed: 0.2s
+trying 2: T size = 316 => (n=2): S size = 158
+Time elapsed: 0.4s
+trying 3: T size = 316 => (n=2): S size = 158
+Time elapsed: 0.47s
+trying 5: T size = 0 => (n=10): S size = 0
+Time elapsed: 8.853s
+
+PROVED!
+Time: 2026-03-07T23:35:28+00:00
+./my_run.sh main9.cpp  11708.56s user 15.89s system 617% cpu 31:37.82 total

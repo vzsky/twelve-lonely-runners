@@ -1,0 +1,45 @@
+% chktex-file 44
+% chktex-file 8
+\documentclass{report}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+
+\newtheorem{lemma}{Lemma}
+
+\begin{document}
+ 
+Write $S_k$ as the set modulo $P$ such that $C_k[t, v] = 1 \iff t \cdot v \in S_k$ where $C_k$ is the coverage bitmask. 
+ 
+\begin{lemma}
+For any solution $\set{v_1, \dots, v_k}$, there exists a solution $\set{1, u_2, \dots, u_k}$
+and a scalar $u \in (\mathbb{Z}/P\mathbb{Z})^\times$ such that
+\[
+    \set{v_1, \dots, v_k} = \set{u,\, u u_2,\, \dots,\, u u_k}.
+\]
+\end{lemma}
+ 
+\begin{proof}
+Set $u = v_1$ and $u_i = v_1^{-1} v_i \pmod{P}$ for each $i$, so that $u_1 = 1$ and
+$u u_i = v_1 \cdot v_1^{-1} v_i = v_i$. Hence
+\[
+    \set{u, u u_2, \dots, u u_k} = \set{v_1, v_2, \dots, v_k}.
+\]
+It remains to show that $\set{1, u_2, \dots, u_k}$ is a valid solution.
+Fix any $t \in (\mathbb{Z}/P\mathbb{Z})^\times$ and set $t' = t v_1^{-1}$.
+Since $\set{v_1, \dots, v_k}$ is a solution, there exists some index $i$ such that
+\[
+    t' \cdot v_i \in S_k.
+\]
+But $t' \cdot v_i = t v_1^{-1} v_i = t \cdot u_i$, so $t \cdot u_i \in S_k$,
+i.e.\ $C_k[t, u_i] = 1$. Since $t$ was arbitrary, $\set{1, u_2, \dots, u_k}$ is a valid solution.
+
+\end{proof}
+
+\end{document}
