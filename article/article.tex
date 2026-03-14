@@ -46,20 +46,21 @@
 % \footnotetext{MSC2020: Primary 00A05, Secondary 00A66.}
 
 \begin{abstract}
-  The Lonely Runner Conjecture asserts that for any number of runners moving at distinct constant speeds around a unit circle
+  The Lonely Runners Conjecture asserts that for any number of runners moving at distinct constant speeds around a unit circle
   from a common starting point, each runner is lonely at some time. A runner is said to be lonely if its distance from every 
   other runner exceeds $1/n$, where $n$ is the total number of runners. 
-  Tao\cite{Tao} showed that it suffices to verify the conjecture for finitely many positive integers. 
-  Using computational methods, Trakultongchai\cite{Trakultongchai} verified the conjecture for up to ten runners.
-  In this work, I prove that the conjecture holds for twelve runners, assuming it holds for eleven runners.
+  Tao showed that it suffices to verify the conjecture for finitely many positive integers \cite{Tao}. 
+  Using computational methods, Trakultongchai verified the conjecture for up to ten runners \cite{Trakultongchai}.
+  In this work, I prove that the twelve Lonely Runners Conjecture holds if the eleven Lonely Runners Conjecture holds.
 \end{abstract}
 
 \bigskip
 \section*{Introduction}
-The Lonely Runners Conjecture is a conjecture stated by Wills~\cite{Wills} that for any $n > 2$, if $n$ runners are 
-running with constant speed around a unit circle. Each runner would be eventually lonely. Formally that means for each runner $i$, 
+The Lonely Runners Conjecture, attributed to Wills~\cite{Wills}, states that for any $n > 2$, if $n$ runners are 
+running with constant speed around a unit circle, each runner would be eventually \textit{lonely}.
+Formally that means for each runner $i$, 
 there is a point in time $t$ such that no runner is in distance $\frac{1}{n}$ of runner $i$.
-By using the symmetry of the problem, one may fix one runner to be stationary and measure all other speeds relative to it. 
+By using the symmetry of the problem, one may fix a runner to be stationary and measure all other speeds relative to it. 
 This yields an equivalent formulation as presented in Conjecture~\ref{lonelyconj}.
 
 \begin{conjecture}
@@ -71,10 +72,10 @@ This yields an equivalent formulation as presented in Conjecture~\ref{lonelyconj
   \label{lonelyconj}
 \end{conjecture}
 
-The conjecture is trivial for 2 and 3 runners. The case of $n \le 7$ were all proven using elementary methods.
+The conjecture is trivial for 2 and 3 runners. The case of $n \le 7$ were proven using elementary methods \cite{Renault}.
 However, as the number of runners increases, the complexity grows exponentially.
 While showing the proof for the case of six runners, Bohman et al. showed that it is 
-enough the considered integer speeds~\cite{Bohman}, reducing the problem from a continuous to a discrete one. 
+enough to considered integer speeds~\cite{Bohman}, reducing the problem from a continuous to a discrete one. 
 The seven runners problem was solved in 2008 by Barajas and Serra~\cite{sevenrunners} using prime filtering and number theory.
 Moreover, Tao showed that it is possible to computationally verify the conjecture by only considering integer speeds 
 up to $n^{O(n^2)}$~\cite{Tao}, turning an infinite problem into a verifiable one. 
@@ -88,21 +89,23 @@ I improved the computational method used by Rosenfeld and Trakultongchai to conc
 it also holds for 12 runners.
 
 \section*{Rosenfeld's and Trakultongchai's Computational Method}
-It was stated by Malikiosis et al. in \cite{Malikiosis} that if the $k-1$ Lonely Runners Conjecture holds, 
+By the result of Corollary 3 of \cite{Rosenfeld}, if the $k-1$ Lonely Runners Conjecture holds, 
 the $k$ lonely runners can be proven by verifying that there are no
 integral speed set $V := \set{0, v_1, \dots, v_k}$ that is a counterexample to the conjecture for 
-\[ v_1\dots v_k < B_k  \text{where} \quad B_k := \paren{\frac{\binom{k+1}{2}^{k-1}}{k}}^k \]
+\[ v_1\dots v_k < B_k \quad \text{where} \quad B_k := \paren{\frac{\binom{k+1}{2}^{k-1}}{k}}^k \]
 
-Rosenfeld introduced the idea of breaking down the bound by small proofs, each of which is a proof that if there is a counterexample, 
+Rosenfeld introduced the idea of breaking down the bound by generating multiple small proofs, 
+each of which is a proof that if there is a counterexample, 
 then $p \mid v_1 \cdots v_k$. By accumulating enough proofs for a set of primes $P := \set{p_j}$, it follows that 
-\[ \prod_{p \in P} p \mid v_1\cdots v_k \] which shows $v_1 \cdots v_k > \prod_{p \in P} p > B_k$
+\[ \prod_{p \in P} p \;\Big\vert\; v_1\cdots v_k. \]
+which shows $v_1 \cdots v_k > \prod_{p \in P} p > B_k$
 
-In the work of Trakultongchai, He defined proper and improper solution sets and showed that 
+In the work of Trakultongchai, he defined proper and improper solution sets and showed that 
 if the set of improper speed sets $I(k, l, p)$ is empty for some value of $l$, then $p \div v_1\cdots v_k$ in any counterexample.
 He argued that such $l$ would need to be a multiple of $k+1$. \cite{Trakultongchai} 
 
-Trakultongchai then proposed an efficient method that allows \textit{lifting} a candidate solution set modulo $p$ 
-into a candidate solution set modulo $np$. Allowing computation to use factors of $k+1$ to help speed up the process.
+Trakultongchai then proposed an efficient method that allows \textit{lifting} a candidate solution set modulo $lp$ 
+into a candidate solution set modulo $clp$. Allowing computation to use prime factors of $k+1$ to help speed up the process.
 For example, with $k=8$, the idea allows splitting the computation into 3 steps, computing $I(k, 1, p)$ then $I(k, 3, p)$ 
 and then $I(k, 9, p)$. 
 
@@ -114,20 +117,23 @@ Notice that for a prime modulus $p$, the objects of interest are speed sets whos
 $(\mathbb{Z}/p\mathbb{Z})^\times$.  
 
 Using Trakultongchai's terminology, the sets denoted $I(k,1,p)$ represent the configurations of speeds that could potentially 
-violate the Lonely Runner Conjecture modulo $p$. The following definition~\ref{defimproper} is the restatement of definition 3.1 from \cite{Trakultongchai}.
+violate the Lonely Runners Conjecture modulo $p$. The following definition~\ref{defimproper} is a reformulation of definition 3.1 from \cite{Trakultongchai}.
 
 \begin{definition}
   Let $p$ be a prime number greater than $k+1$ and $(p, l) = 1$.
   Let $\pi: \Int{pl} \to \Int{p}$ be the natural projection. 
-  A speed set $v := \set{v_1, \dots, v_k} \in (\pi^{-1}(\Unit{lp}))^k$ is in $I(k, l, p)$ if for any 
-  $t \in \Int{lp}$ there exists $i$ such that $\norm{\frac{tv_i}{lp}} < \frac{1}{k+1}$ and $\gcd(lp, v_1, \dots, \hat{v_i}, \dots, v_k) = 1$ 
-  for all $i$.
+  A speed set $v := \set{v_1, \dots, v_k}$ is such that $v_i \in \pi^{-1}(\Unit{lp})$ for all $i$.
+  A speed set $v$ is improper modulo $lp$, write $v \in I(k, l, p)$ if both of the following two conditions holds: 
+  \begin{enumerate}
+    \item for any $t \in \Int{lp}$ there exists $i$ such that $\norm{\frac{tv_i}{lp}} < \frac{1}{k+1}$.
+    \item for all $i$, $\gcd(lp, v_1, \dots, v_{i-1}, v_{i+1}, \dots, v_k) = 1$.
+  \end{enumerate}
   \label{defimproper}
 \end{definition}
 
 Intuitively, the condition states that for every time parameter $t$ modulo $p$, there is a runner who fails 
 to achieve the required separation distance $\frac{1}{k+1}$ from the stationary runner. 
-Thus the set is a potential obstruction to the Lonely Runner Conjecture when considered modulo $p$.
+Thus the set is a potential obstruction to the Lonely Runners Conjecture when considered modulo $p$.
 
 \begin{lemma}
   For any improper speed set $\set{v_1, \dots, v_k}$ in $I(k, 1, p)$, there exists an improper set
@@ -143,9 +149,10 @@ Thus the set is a potential obstruction to the Lonely Runner Conjecture when con
       \set{u, u u_2, \dots, u u_k} = \set{v_1, v_2, \dots, v_k}.
   \]
   
-  It remains to verify that $\{1,u_2,\dots,u_k\}$ is also an improper set. Since $l = 1$, the gcd condition is true regardless.
+  It remains to verify that $\{1,u_2,\dots,u_k\}$ is also an improper set. 
+  Since $l = 1$, $\gcd(p, v_i) = 1$ for any $i$, so the gcd condition holds trivially. 
   Therefore, it enough to show the first condition.
-  To do that, pick any $t \in (\Int{p})^\times$ and set $t' = t v_1^{-1}$.
+  To do that, pick any $t \in \Int{p}$ and set $t' = t v_1^{-1}$.
   Since $\set{v_1, \dots, v_k}$ is an improper set, there exists some index $i$ such that
   \[ \frac{1}{k+1} > \norm{\frac{t' v_i}{p}} = \norm{\frac{t v_1^{-1} v_i}{p}} \]
   If $i = 1$ then $\norm{t/p} < \frac{1}{k+1}$ otherwise $\norm{{t u_i}/{p}} < \frac{1}{k+1}$
@@ -154,22 +161,25 @@ Thus the set is a potential obstruction to the Lonely Runner Conjecture when con
 
 The lemma shows an equivalent relation of improper sets in $I(k, 1, p)$ under multiplication by units. 
 Consequently, when enumerating possible counterexamples modulo $p$ it suffices to consider
-only normalized sets of the form $\{1,u_2,\dots,u_k\}$.  This reduces the search space by a factor of $p$, since each equivalence class under scaling
-contains $p-1$ representatives.
+only normalized sets of the form $\{1,u_2,\dots,u_k\}$.  This reduces the search space by a factor of $p$. 
 
-When lifting $I(k, l, p)$ to $I(k, c, p)$ by a multiplier $c$. The shadow, as described in \cite{Trakultongchai},
+When lifting $I(k, l, p)$ to $I(k, cl, p)$ by a multiplier $c$. The \textit{shadow}, as described in \cite{Trakultongchai},
 of $I(k, l, p)$ at level $cl$ is the product of component-wise preimage of the natural projection $\pi: \Int{lp} \to \Int{clp}$.
+Formally 
+\[ \delta_{cl}I(k, l, p) = \bigcup_{v \in I(k,l,p)} \prod_{i=1}^k \pi^{-1}(v_i) \]
+where $\pi: \Int{clp} \to \Int{lp}$ is the natural projection. Thus motivate the following lemma~\ref{lemmacomp}
 
 \begin{lemma}
   Let $(l, p) = 1$ and $\pi: \Int{pl} \to \Int{p}$ be the natural projection.
   For any improper set $\set{v_1, \dots, v_k}$ in $I(k, l, p)$, there is an improper set $\set{u_1, u_2, \dots, u_k}$ in $I(k, l, p)$
   and a number $u \in (\Int{pl})^\times$ such that $\pi(u_1) = 1$, i.e. $u_1 \equiv 1 \pmod{p}$,
   and \[ \set{uu_1, uu_2, \dots, uu_k} = \set{v_1, \dots, v_k} \text{ as sets in } \Int{lp} \]
+  \label{lemmacomp}
 \end{lemma}
 
 \begin{proof}
   Since $(p, l) = 1$, the restriction $\pi|_{(\Int{pl})^\times} : (\Int{pl})^\times \to (\Int{p})^\times$ 
-  is surjective. Since $\set{v_1,\dots,v_k}$ is an improper set, $\pi(v_1) \neq 0$, so 
+  is surjective by the Chinese Remainder Theorem. Since $\set{v_1,\dots,v_k}$ is an improper set, $\pi(v_1) \neq 0$, so 
   $\pi(v_1) \in (\Int{p})^\times$. From surjectivity, there exists $u \in (\Int{pl})^\times$ with $\pi(u) = \pi(v_1)$, 
   and pick $u_i := u^{-1} v_i$ for each $i$. 
 
@@ -183,11 +193,11 @@ of $I(k, l, p)$ at level $cl$ is the product of component-wise preimage of the n
   since $u \in (\Int{pl})^\times$ we have $\gcd(u^{-1}, lp) = 1$, so multiplication by $u^{-1}$ 
   preserves all divisibility relations with respect to $lp$. Hence for each $i$,
   \[
-    \gcd(u_1, \dots, \hat{u}_i, \dots, u_k, lp) = \gcd(v_1, \dots, \hat{v}_i, \dots, v_k, lp) = 1,
+    \gcd(u_1, \dots, \widehat{u}_i, \dots, u_k, lp) = \gcd(v_1, \dots, \widehat{v}_i, \dots, v_k, lp) = 1,
   \]
   where the last equality holds since $\{v_1, \dots, v_k\}$ is an improper set.
 
-  For the second condition, pick any $t \in (\Int{pl})^\times$ and set $t' = tu^{-1}$ resembling lemma~\ref{lemmaprime}.
+  For the second condition, pick any $t \in \Int{pl}$ and set $t' = tu^{-1}$ resembling lemma~\ref{lemmaprime}.
   Since $\{v_1, \dots, v_k\}$ is improper, there exists some index $i$ such that
   \[
     \frac{1}{k+1} > \norm{\frac{t' v_i}{pl}} = \norm{\frac{t u^{-1} v_i}{pl}} 
@@ -196,7 +206,7 @@ of $I(k, l, p)$ at level $cl$ is the product of component-wise preimage of the n
   which is precisely the condition for $\{u_1, \dots, u_k\}$.
 \end{proof}
 
-The lemma shows that every improper set in $I(k, l, p)$ is a $\Unit{pl}$-multiple 
+The lemma shows that every improper set in $I(k, l, p)$ is a unit multiple 
 of an improper set whose first element projects to $1 \in \Int{p}$. In particular, it suffices to enumerate improper 
 sets only among those with $\pi(u_1) = 1$, and it follows that 
 \[
@@ -212,47 +222,64 @@ execution and by introducing more memory-efficient data structures.  The new
 implementation remains faithful to the original algorithmic ideas but is
 significantly faster in practice.
 
-\section*{Introducing extra steps}
-The cost of lifting $I(k, l, p)$ to $I(k, lc, p)$ is proportional to $|I(k, l, p)| \cdot c^k$,
+\section*{Introducing intermediate steps}
+In this section, I write $I'(k, l, p) := I(k, l, p)/\Unit{p}$.
+The cost of lifting $I'(k, l, p)$ to $I'(k, lc, p)$ is proportional to $|I'(k, l, p)| \cdot c^k$,
 since each improper set modulo $lp$ has $c^k$ candidate preimages modulo $lcp$ to check.
-In particular, a lift with $c = 2$ costs $|I(k,l,p)| \cdot 2^k$, whereas a lift with $c = 3$ 
-costs $|I(k,l,p)| \cdot 3^k$, making the $c = 2$ step significantly cheaper for large $k$.
+In particular, a lift with $c = 2$ costs $|I'(k,l,p)| \cdot 2^k$, whereas a lift with $c = 3$ 
+costs $|I'(k,l,p)| \cdot 3^k$, making the $c = 2$ step significantly cheaper for large $k$.
 
 Moreover, I observed that lifting with $c = 2$ can reduce the size of the improper set, 
-i.e. $|I(k, 2l, p)| < |I(k, l, p)|$ in practice. Thus, performing an additional 
+i.e. $|I'(k, 2l, p)| < |I'(k, l, p)|$ in practice. Thus, performing an additional 
 $c = 2$ lift before a $c = 3$ lift can reduce the size of $I(k, l, p)$ enough to make the 
 overall computation shorter, even accounting for the extra step. That is, the two-step 
 strategy
 \[
-  I(k, l, p) \xrightarrow{c=2} I(k, 2l, p) \xrightarrow{c=3} I(k, 6l, p)
+  I'(k, l, p) \xrightarrow{c=2} I'(k, 2l, p) \xrightarrow{c=3} I'(k, 6l, p)
 \]
 can be cheaper than the direct lift
 \[
-  I(k, l, p) \xrightarrow{c=6} I(k, 6l, p).
+  I'(k, l, p) \xrightarrow{c=6} I'(k, 6l, p).
 \]
 
-% To put numbers to the observation, I have devised two runs to proof the case of $k=8$. The first one follows Trakultongchai's method 
-% described in point 4.1 of \cite{Trakultongchai}. The second one involve trying to lift with $c=2$ twice and keep the smallest set.
-% Specifically, the second method can be described as 
-% \begin{enumerate}
-%   \item Generate $S_1 := I(8, 1, p)$
-%   \item Compute $S_2 := I(8, 2, p)$ by lifting $S_1$.
-%   \item If $\abs{S_2} < \abs{S_1}$, compute $S_4 := I(8, 4, p)$ by lifting $S_2$.
-%   \item Take $T_1$ as the smallest set among $S_1, S_2$ and $S_4$.
-%   \item Compute $T_3$ by lifting $T_1$ with $c=3$. 
-%   \item Compute $T_9$ by lifting $T_3$ with $c=3$.
-% \end{enumerate}
-%
-% By running the two methods on a 10-core Apple M4 processor (Macbook Air 2025), 
-% the first method takes 18 seconds while the second methods uses 12 seconds, 
-% while the different are tolerable in practice, this step scales nicely and could help collapse the computational cost for higher $k$.
-% % could try running for k = 9 for a more dramatic result
+To put numbers to the observation, I have devised two runs to prove the case of $k=8$. The first one follows Trakultongchai's method 
+described in point 4.1 of \cite{Trakultongchai}. The second one involve trying to lift with $c=2$ twice and keep the smallest set.
+Specifically, the second method can be described as 
+\begin{enumerate}
+  \item Generate $S_1 := I'(8, 1, p)$
+  \item Compute $S_2 := I'(8, 2, p)$ by lifting $S_1$.
+  \item If $\abs{S_2} < \abs{S_1}$, compute $S_4 := I'(8, 4, p)$ by lifting $S_2$.
+  \item Take $T_1$ as the smallest set among $S_1, S_2$ and $S_4$.
+  \item Compute $T_3$ by lifting $T_1$ with $c=3$. 
+  \item Compute $T_9$ by lifting $T_3$ with $c=3$.
+\end{enumerate}
+
+By running the two methods on a 10-core Apple M4 processor (Macbook Air 2025), 
+the first method takes 18 seconds while the second methods uses 12 seconds, 
+
+This speedup can be dramatic in certain cases, for example in the case of $k=9$. One idea is to generate $S_1 := I'(9, 1, p)$, 
+then lift it to $S_2 := I'(9, 2, p)$ with $c = 2$ and lift it to $S_{10} := I'(9, 10, p)$ with $c = 5$. My proposal is 
+\begin{enumerate}
+  \item Generate $S_1 := I'(9, 1, p)$
+  \item Compute $S_2 := I'(9, 2, p)$ by lifting $S_1$ with $c=2$.
+  \item Compute $S_4 := I'(9, 4, p)$ by lifting $S_2$ with $c=2$.
+  \item Take $T_1$ to be the smaller set among $S_2$ and $S_4$.
+  \item Compute $T_3$ by lifting $T_1$ with $c=3$. At this point, 
+    $T_3$ can be either $I'(9, 6, p)$ or $I'(9, 12, p)$.
+  \item Take $U_1$ to be the smaller set among $T_1$ and $T_3$.
+  \item Compute $U_5$ by lifting $U_1$ with $c = 5$.
+    At this point, $U_5 = I'(9, l, p)$ for some $l$ such that $10 \mid l$.
+\end{enumerate}
+
+For a specific number, the first method without the intermediate step could not compute $I'(9, 10, 53)$ within 15 minutes while it takes 
+under 5 seconds with the second method. This opens up the possibility of lifting an improper set to a larger prime number and could help with 
+the verification of the eleven runners conjecture.
 
 \section*{Result}
 
-Trakultongchai wrote a foundation work in \cite{tanupatcode} to verify the conjecture of nine and ten runners. His computation uses 
-15 minutes for $k=8$ and approximately 23 hours for $k=9$. I have used this as a base framework and employed AIs in facilitating the 
-refactor process to create \cite{mycode}.
+Rosenfeld wrote \cite{rosenfeldcode} to verify the conjecture for eight runners and Trakultongchai developed \cite{tanupatcode} to verify the conjecture of nine and ten runners. His computation uses 
+15 minutes for $k=8$ and approximately 23 hours for $k=9$. Building on the framework of \cite{tanupatcode}, I developed \cite{mycode},
+with assistance from AI-based tools, to improve performance and scalability.
 
 Using the improvements proposed, I managed to complete the proof of $k=8$ in 12 seconds and $k=9$ in 181 seconds on a 10-core 
 Apple M4 processor (Macbook Air 2025). The source of the computation can be found in \cite{mycode}
@@ -270,21 +297,20 @@ For the twelve runners case, let \[ P_{11} := \set{ \begin{aligned}
 Using the algorithm described in the previous section, I have verified
 that for every prime $p \in P_{11}$ there exists $l \le 36$ such that the set $I(k, l, p)$ is empty.
 Equivalently, any counterexample to the $12$-runner case of the
-Lonely Runner Conjecture must have speeds divisible by each prime in
+Lonely Runners Conjecture must have speeds divisible by each prime in
 $P_{11}$. Consequently, if a counterexample exists, its product of speeds must be
 divisible by the product
 \[ \prod_{p \in P_{11}} p \]
 
 \begin{theorem}
-  the twelve Lonely Runners Conjectures holds is equivalent to the conjecture for eleven runners.
+  The Twelve Lonely Runners Conjecture holds if the Eleven Lonely Runners Conjecture holds. 
 \end{theorem}
 \begin{proof}
-  First, if the twelve runners conjectures holds, then it must hold for eleven runners.
-  For the converse, if it holds for eleven runners, then the result of \cite{Malikiosis} asserts that it suffices 
+  If the conjecture holds for eleven runners, then the result of \cite{Rosenfeld} asserts that it suffices 
   to check integral solutions up to $B_{11}$.
 
-  As $B_{11}$, the bound needed to reduce the problem of twelve runners to eleven runners, is less than $2^{434.5}$ and 
-  $\prod_{p \in P_{11}} p > 2^{435} > B_{11}$. There is no counterexample to the twelve runners case.
+  As $B_{11}$, the bound needed to reduce the problem of twelve runners to eleven runners, is less than $e^{434.5}$ and 
+  $\prod_{p \in P_{11}} p > e^{435} > B_{11}$. There is no counterexample to the twelve runners case.
 \end{proof}
 
 \section*{Further work}
