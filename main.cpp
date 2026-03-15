@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <cassert>
 #include <climits>
+#include <bitset>
 #include <cstdint>
 #include <functional>
 #include <iostream>
@@ -213,6 +214,14 @@ template <int K, int P> static SetOfSpeedSets<K> find_all_covers_parallel(const 
     {
       std::vector<char> elim     = base_eliminated;
       std::array<int, P / 2> rem = base_remaining;
+
+      for (size_t idx = 0; idx < lo; ++idx)
+      {
+        int j = top_candidates[idx];
+        elim[j] = 1;
+        for (int pos = 0; pos < P / 2; ++pos)
+          if (cov[j][pos]) rem[pos]--;
+      }
 
       for (size_t idx = lo; idx < hi; ++idx)
       {
@@ -552,8 +561,11 @@ int main()
 
   constexpr int K             = 10;
   constexpr std::array primes = {
-      131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191,
+      // 131, 137, 139, 149, 151, 157, 
+      107, 109, 113, 127,
+      163, 167, 173, 179, 181, 191,
       193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251,
+      257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 
   };
   constexpr std::array config = {Maybe(2), Project(2), Maybe(3),   Project(3),
                                  Maybe(5), Project(5), Project(7), Force(11)};

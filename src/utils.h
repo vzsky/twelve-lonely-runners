@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <functional>
 #include <iostream>
+#include <format>
 #include <numeric>
 #include <thread>
 #include <utility>
