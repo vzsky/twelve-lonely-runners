@@ -362,7 +362,9 @@ template <int K> struct Dfs
   SetOfSpeedSets<K> result;
 
   Dfs(const Context& ctx, const std::array<int, K>& ord, const std::array<std::vector<int>, K>& cnd)
-      : C{ctx}, order{ord}, cand{cnd} { }
+      : C{ctx}, order{ord}, cand{cnd}
+  {
+  }
 
   void run(int depth)
   {
@@ -409,7 +411,7 @@ template <int K> SetOfSpeedSets<K> lift(const Context& C, const SpeedSet<K>& see
   std::iota(order.begin(), order.end(), 0);
   std::sort(order.begin(), order.end(), [&](int A, int B) { return cand[A].size() < cand[B].size(); });
 
-  Dfs<K> runner {C, order, cand};
+  Dfs<K> runner{C, order, cand};
   runner.run(0);
 
   return runner.result;
@@ -569,14 +571,20 @@ int main()
   // constexpr std::array config = {Force(2), Maybe(2), Maybe(3), Force(5)};
 
   constexpr int K             = 10;
-  constexpr std::array primes = {// 131, 137, 139, 149, 151, 157, 107, 109, 127, 163,
-                                 // 167, 173, 179, 181,
-                                 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241,
-                                 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337,
-                                 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431,
-                                 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499};
-  constexpr std::array config = {Maybe(2), Project(2), Maybe(3),   Project(3),
-                                 Maybe(5), Project(5), Project(7), Force(11)};
+  constexpr std::array primes = {// 103,
+                                 // 131, 137, 139, 149, 151, 157, 107, 109, 127, 163,
+                                 // 167, 173, 179, 433 191, 193, 197, 199, 211, 223, 227, 229, 233, 239,
+                                 // 257, 263, 269, 277, 281, 283, 307 311, 313, 433, 439, 443, 449, 457, 461
+                                 // potentially try again 181,
+                                 241, 251, 271, 293, 293, 317, 331, 337, 347, 349, 353, 359,
+                                 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431};
+  constexpr std::array config = {Force(2), Force(2), Project(2), Force(3), Project(3), Project(5), Force(11)};
+
+  // needs it's own config
+  // constexpr int K             = 10;
+  // constexpr std::array primes = { 31 };
+  // constexpr std::array config = {Force(2), Force(2), Force(2), Project(2), Force(3), Project(3),
+  // Project(5), Force(11)};
 
   // constexpr int K             = 11;
   // constexpr std::array primes = {
