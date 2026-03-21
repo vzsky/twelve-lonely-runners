@@ -19,7 +19,8 @@ struct Config
   {
     Force,
     Maybe,
-    Project
+    Project,
+    Print,
   } type;
   int prime;
 };
@@ -486,13 +487,7 @@ template <int K, int P, std::array config> bool check_prime(int thread_id = 0)
   int current_n = 1;
   for (auto [type, mult] : config)
   {
-    if ((mult == 7 && S.size() > 100) || (mult == 11 && S.size() > 10))
-    {
-      std::cout << std::format("[THREAD {}] SKIPPED", thread_id);
-      continue;
-    }
-    if (mult == 11) std::cout << print_time() << " begining lift 11 with: " << S << std::endl;
-    if (mult == last_skip) continue;
+    if (type == Config::Type::Print) std::cout << "seeds: " << S << std::endl;
     timeit([&]
     {
       lift::Context C2 = lift::make_context(P, K, current_n * mult, true);
@@ -554,6 +549,7 @@ int main()
   constexpr auto Force   = [](int p) { return Config{Config::Type::Force, p}; };
   constexpr auto Maybe   = [](int p) { return Config{Config::Type::Maybe, p}; };
   constexpr auto Project = [](int p) { return Config{Config::Type::Project, p}; };
+  constexpr auto Print   = []() { return Config{Config::Type::Print, 0}; };
 
   // constexpr int K             = 8;
   // constexpr std::array primes = {47,  53,  59,  61,  67,  71,  73,  79,  83,  89,  97,  101, 103,
@@ -570,13 +566,14 @@ int main()
   //                                257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317};
   // constexpr std::array config = {Force(2), Maybe(2), Maybe(3), Force(5)};
 
-  constexpr int K             = 10;
-  constexpr std::array primes = {103, 131, 137, 139, 149, 151, 157, 107, 109, 127, 163, 167, 173,
-                                 179, 433, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 251,
-                                 257, 263, 269, 271, 277, 281, 283, 307, 311, 313, 347, 379, 433,
-                                 439, 443, 449, 457, 461, 241, 293, 293, 317, 331, 337, 349, 353,
-                                 359, 367, 373, 383, 389, 397, 401, 409, 419, 421, 431};
-  constexpr std::array config = {Force(2), Force(2), Project(2), Force(3), Project(3), Project(5), Force(11)};
+  // constexpr int K             = 10;
+  // constexpr std::array primes = {103, 131, 137, 139, 149, 151, 157, 107, 109, 127, 163, 167, 173,
+  //                                179, 433, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 251,
+  //                                257, 263, 269, 271, 277, 281, 283, 307, 311, 313, 347, 379, 433,
+  //                                439, 443, 449, 457, 461, 241, 293, 293, 317, 331, 337, 349, 353,
+  //                                359, 367, 373, 383, 389, 397, 401, 409, 419, 421, 431};
+  // constexpr std::array config = {Force(2), Force(2), Project(2), Force(3), Project(3), Project(5),
+  // Force(11)};
 
   // constexpr int K             = 11;
   // constexpr std::array primes = {
@@ -586,6 +583,25 @@ int main()
   //     431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547,
   // };
   // constexpr std::array config = {Force(2), Force(2), Maybe(2), Maybe(2), Force(3), Maybe(3)};
+
+  constexpr int K             = 12;
+  constexpr std::array primes = {
+      // confirmed
+      // 151, 199, 211, 223, 227, 229, 233, 239, 251, 257, 263, 269, 271, 277, 281,
+      // 283, 307, 311, 313, 347, 379, 433,
+      // 241, 293, 317, 331, 337, 349, 353, 359, 367, 373, 383, 389
+      // TODO
+      // 137, 139, 149, 163, 167, 173, 179, 181, 191, 193, 197,
+      397, 401, 409, 419, 421, 431, 443, 449, 457, 461,
+  };
+  constexpr std::array config = {Force(2), Force(2), Project(2), Force(3), Project(3), Print()};
+
+  // constexpr int K             = 13;
+  // constexpr std::array primes = {199, 211, 223, 227,
+  //                                229, 233, 239, 251, 257, 263, 269, 271, 277, 281, 283, 307, 311, 313,
+  //                                347, 379, 433, 439, 443, 449, 457, 461, 241, 293, 293, 317, 331, 337,
+  //                                349, 353, 359, 367, 373, 383, 389, 397, 401, 409, 419, 421, 431};
+  // constexpr std::array config = {Force(2), Force(2), Project(2), Force(3), Project(3), Print()};
 
   roll_works<K, primes, config>(std::make_index_sequence<primes.size()>{});
 }
